@@ -41,17 +41,19 @@ export default function HeroCarousel({ images }: Props) {
         </div>
       ))}
       {total > 1 && (
-        <div className="absolute bottom-6 left-1/2 z-20 flex -translate-x-1/2 gap-2">
+        <div className="absolute left-1/2 z-20 flex -translate-x-1/2 gap-1 sm:gap-2 [bottom:max(1.5rem,env(safe-area-inset-bottom))]">
           {images.map((_, i) => (
             <button
               key={i}
               type="button"
               onClick={() => setIndex(i)}
-              className={`h-2 w-2 rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-transparent ${
-                i === index ? "scale-125 bg-red-600" : "bg-white/40 hover:bg-white/60"
+              className={`flex min-h-[44px] min-w-[44px] items-center justify-center rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-transparent ${
+                i === index ? "scale-110 bg-red-600" : "bg-white/40 hover:bg-white/60"
               }`}
               aria-label={`Ir a imagen ${i + 1}`}
-            />
+            >
+              <span className={`rounded-full ${i === index ? "h-2 w-2 scale-125 bg-white" : "h-2 w-2 bg-white/80"}`} />
+            </button>
           ))}
         </div>
       )}

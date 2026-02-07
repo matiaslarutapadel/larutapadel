@@ -11,15 +11,15 @@ const NAV = [
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-40 border-b border-zinc-200 bg-white shadow dark:border-red-950/30 dark:bg-zinc-900 dark:shadow-lg">
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+    <header className="sticky top-0 z-40 border-b border-zinc-200 bg-white shadow dark:border-red-950/30 dark:bg-zinc-900 dark:shadow-lg [padding-top:env(safe-area-inset-top)]">
+      <div className="mx-auto flex min-h-14 max-w-7xl items-center justify-between gap-3 px-3 sm:h-16 sm:px-6 lg:px-8">
         <Link href="/" className="relative flex shrink-0 items-center">
           <Image
             src={logo}
             alt={logoAlt}
             height={48}
             width={160}
-            className="h-10 w-auto object-contain dark:hidden sm:h-11"
+            className="h-9 w-auto max-w-[140px] object-contain object-left dark:hidden sm:max-w-none sm:h-11"
             priority
           />
           <Image
@@ -27,15 +27,15 @@ export default function Header() {
             alt={logoAlt}
             height={48}
             width={160}
-            className="hidden h-10 w-auto object-contain dark:block sm:h-11"
+            className="hidden h-9 w-auto max-w-[140px] object-contain object-left dark:block sm:max-w-none sm:h-11"
           />
         </Link>
-        <nav className="flex items-center gap-8">
+        <nav className="flex items-center gap-3 sm:gap-6 md:gap-8">
           {NAV.map(({ label, href }) => (
             <Link
               key={label}
               href={href}
-              className="text-sm font-medium uppercase tracking-wide text-zinc-600 transition-colors hover:text-red-500 dark:text-zinc-300 dark:hover:text-red-500"
+              className="inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded-lg text-xs font-medium uppercase tracking-wide text-zinc-600 transition-colors hover:text-red-500 dark:text-zinc-300 dark:hover:text-red-500 sm:text-sm"
             >
               {label}
             </Link>
