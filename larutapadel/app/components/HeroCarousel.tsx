@@ -109,12 +109,12 @@ export default function HeroCarousel({ images }: Props) {
                   isPaused.current = false;
                 }, PAUSE_AFTER_SWIPE_MS);
               }}
-              className={`flex min-h-[44px] min-w-[44px] items-center justify-center rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-transparent ${
+              className={`flex min-h-[28px] min-w-[28px] items-center justify-center rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-transparent sm:min-h-[44px] sm:min-w-[44px] ${
                 i === index ? "scale-110 bg-red-600" : "bg-white/40 hover:bg-white/60"
               }`}
               aria-label={`Ir a imagen ${i + 1}`}
             >
-              <span className={`rounded-full ${i === index ? "h-2 w-2 scale-125 bg-white" : "h-2 w-2 bg-white/80"}`} />
+              <span className={`rounded-full ${i === index ? "h-1.5 w-1.5 scale-125 bg-white sm:h-2 sm:w-2" : "h-1.5 w-1.5 bg-white/80 sm:h-2 sm:w-2"}`} />
             </button>
           ))}
         </div>
