@@ -1,22 +1,49 @@
 import Image from "next/image";
 import HeroCarousel from "./components/HeroCarousel";
 import { images } from "./lib/images";
+import { logo, logoAlt, logoDark } from "./lib/logo";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-zinc-950">
+    <div className="min-h-screen bg-zinc-100 dark:bg-zinc-950">
       <main>
         <section className="relative grid min-h-[85vh] grid-cols-1 md:grid-cols-2">
-          <div className="flex flex-col justify-center bg-zinc-900 px-8 py-20 lg:px-16">
+          <div className="flex flex-col justify-center bg-zinc-200 px-8 py-20 dark:bg-zinc-900 lg:px-16">
+            <div className="relative mb-8">
+              <Image
+                src={logo}
+                alt={logoAlt}
+                width={300}
+                height={90}
+                className="h-24 w-auto object-contain dark:hidden md:h-28"
+                priority
+              />
+              <Image
+                src={logoDark}
+                alt={logoAlt}
+                width={300}
+                height={90}
+                className="hidden h-24 w-auto object-contain dark:block md:h-28"
+              />
+            </div>
             <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-red-500">Bienvenidos</p>
-            <h1 className="mb-4 text-4xl font-bold uppercase leading-tight text-white md:text-5xl lg:text-6xl">
-              LA RUTA
-              <br />
-              <span className="text-red-500">PADEL</span>
-            </h1>
-            <p className="mb-8 max-w-md text-zinc-400">
-              Tu club de pádel. Canchas de primer nivel para jugar y disfrutar.
+            <p className="mb-6 max-w-md text-zinc-600 dark:text-zinc-400">
+              Tu club de pádel. Canchas de primer nivel, cafetería y amplio estacionamiento. Próximamente canchas techadas.
             </p>
+            <ul className="mb-8 flex flex-wrap gap-4 text-sm text-zinc-600 dark:text-zinc-400">
+              <li className="flex items-center gap-2">
+                <span className="h-1.5 w-1.5 rounded-full bg-red-500" />
+                Cafetería
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="h-1.5 w-1.5 rounded-full bg-red-500" />
+                Amplio estacionamiento
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="rounded bg-red-500/20 px-1.5 py-0.5 text-xs font-medium text-red-600 dark:text-red-400">Próximo</span>
+                Canchas techadas
+              </li>
+            </ul>
             <div className="flex flex-wrap gap-4">
               <a
                 href="#reservas"
@@ -37,16 +64,37 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="el-club" className="border-t border-zinc-800 bg-zinc-900 py-20">
+        <section id="el-club" className="border-t border-zinc-300 bg-zinc-200 py-20 dark:border-zinc-800 dark:bg-zinc-900">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mb-14 text-center">
-              <h2 className="mb-3 text-3xl font-bold uppercase tracking-tight text-white md:text-4xl">
+              <h2 className="mb-3 text-3xl font-bold uppercase tracking-tight text-zinc-900 md:text-4xl dark:text-white">
                 EL CLUB
               </h2>
               <div className="mx-auto h-1 w-20 rounded-full bg-red-600" />
-              <p className="mx-auto mt-4 max-w-2xl text-zinc-400">
-                Canchas, vestuarios y zonas de descanso para que disfrutes cada partido.
+              <p className="mx-auto mt-4 max-w-2xl text-zinc-600 dark:text-zinc-400">
+                Canchas de primer nivel, vestuarios, cafetería y amplio estacionamiento. Próximamente canchas techadas.
               </p>
+            </div>
+            <div className="mb-12 flex flex-wrap justify-center gap-6 sm:gap-10">
+              <div className="flex items-center gap-2 rounded-xl border border-zinc-300 bg-white/60 px-5 py-3 dark:border-zinc-700 dark:bg-zinc-800/60">
+                <svg className="h-5 w-5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                </svg>
+                <span className="font-medium text-zinc-800 dark:text-zinc-200">Cafetería</span>
+              </div>
+              <div className="flex items-center gap-2 rounded-xl border border-zinc-300 bg-white/60 px-5 py-3 dark:border-zinc-700 dark:bg-zinc-800/60">
+                <svg className="h-5 w-5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                <span className="font-medium text-zinc-800 dark:text-zinc-200">Amplio estacionamiento</span>
+              </div>
+              <div className="flex items-center gap-2 rounded-xl border border-red-200 bg-red-50 px-5 py-3 dark:border-red-900/50 dark:bg-red-950/30">
+                <svg className="h-5 w-5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                </svg>
+                <span className="font-medium text-zinc-800 dark:text-zinc-200">Próximamente canchas techadas</span>
+              </div>
             </div>
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {[images[1], images[2], images[3], images[4], images[5], images[6]].map((img, i) => (
@@ -58,17 +106,17 @@ export default function Home() {
                     className="object-cover transition-transform duration-300 group-hover:scale-105"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-zinc-900/80 to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-zinc-900/80 to-transparent opacity-0 transition-opacity group-hover:opacity-100 dark:from-zinc-900/80" />
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        <section className="border-t border-zinc-800 bg-zinc-900 py-20">
+        <section className="border-t border-zinc-300 bg-zinc-200 py-20 dark:border-zinc-800 dark:bg-zinc-900">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mb-14 text-center">
-              <h2 className="mb-3 text-3xl font-bold uppercase tracking-tight text-white md:text-4xl">
+              <h2 className="mb-3 text-3xl font-bold uppercase tracking-tight text-zinc-900 md:text-4xl dark:text-white">
                 GALERÍA
               </h2>
               <div className="mx-auto h-1 w-20 rounded-full bg-red-600" />
@@ -90,7 +138,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="contacto" className="border-t border-zinc-800 bg-zinc-950 py-20">
+        <section id="contacto" className="border-t border-zinc-300 bg-zinc-100 py-20 dark:border-zinc-800 dark:bg-zinc-950">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-3">
               <div className="relative aspect-video overflow-hidden rounded-xl">
@@ -103,9 +151,9 @@ export default function Home() {
                 <Image src={images[11]} alt="Club" fill className="object-cover" sizes="33vw" />
               </div>
             </div>
-            <div className="mt-16 flex flex-col items-center justify-center rounded-2xl border border-red-600/30 bg-zinc-900/50 px-6 py-12 text-center">
-              <h2 className="mb-2 text-2xl font-bold text-white">CONTACTO</h2>
-              <p className="mb-6 text-zinc-400">Reservas y consultas por WhatsApp</p>
+            <div className="mt-16 flex flex-col items-center justify-center rounded-2xl border border-red-600/30 bg-zinc-200 px-6 py-12 text-center dark:bg-zinc-900/50">
+              <h2 className="mb-2 text-2xl font-bold text-zinc-900 dark:text-white">CONTACTO</h2>
+              <p className="mb-6 text-zinc-600 dark:text-zinc-400">Reservas y consultas por WhatsApp</p>
               <a
                 href="https://wa.me/5491112345678"
                 target="_blank"

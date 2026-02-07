@@ -26,8 +26,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es">
-      <body className={`${geistSans.variable} ${geistMono.variable} bg-white text-zinc-900 antialiased`}>
+    <html lang="es" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){var k='larutapadel-theme';var v=localStorage.getItem(k);var d=v!=='light';if(d)document.documentElement.classList.add('dark');else document.documentElement.classList.remove('dark');})();`,
+          }}
+        />
+      </head>
+      <body className={`${geistSans.variable} ${geistMono.variable} bg-zinc-100 text-zinc-900 antialiased dark:bg-zinc-950 dark:text-white`}>
         <Header />
         {children}
         <Footer />

@@ -1,4 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
+import { logo, logoAlt, logoDark } from "../lib/logo";
 
 const NAV = [
   { label: "Inicio", href: "/" },
@@ -12,25 +14,28 @@ const WHATSAPP_NUMBER = "5491112345678";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-red-900/40 bg-zinc-900">
+    <footer className="border-t border-zinc-300 bg-zinc-200 dark:border-red-900/40 dark:bg-zinc-900">
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-4">
           <div className="lg:col-span-2">
-            <Link href="/" className="inline-flex items-center gap-3">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-red-600 font-bold text-white shadow-lg shadow-red-900/30">
-                R
-              </div>
-              <div>
-                <span className="block text-xl font-bold tracking-tight text-white">
-                  LA RUTA <span className="text-red-500">PADEL</span>
-                </span>
-                <span className="text-sm text-zinc-500">
-                  Tu club de pádel
-                </span>
-              </div>
+            <Link href="/" className="relative inline-flex items-center">
+              <Image
+                src={logo}
+                alt={logoAlt}
+                height={64}
+                width={220}
+                className="h-16 w-auto object-contain dark:hidden"
+              />
+              <Image
+                src={logoDark}
+                alt={logoAlt}
+                height={64}
+                width={220}
+                className="hidden h-16 w-auto object-contain dark:block"
+              />
             </Link>
-            <p className="mt-6 max-w-sm text-sm leading-relaxed text-zinc-400">
-              Canchas de primer nivel. Reservá tu cancha o escribinos por WhatsApp.
+            <p className="mt-6 max-w-sm text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
+              Canchas de primer nivel, cafetería y amplio estacionamiento. Próximamente canchas techadas. Reservá tu cancha o escribinos por WhatsApp.
             </p>
             <a
               href={`https://wa.me/${WHATSAPP_NUMBER}`}
@@ -53,7 +58,7 @@ export default function Footer() {
                 <li key={label}>
                   <Link
                     href={href}
-                    className="text-sm text-zinc-400 transition-colors hover:text-red-500"
+                    className="text-sm text-zinc-600 transition-colors hover:text-red-500 dark:text-zinc-400 dark:hover:text-red-500"
                   >
                     {label}
                   </Link>
@@ -65,29 +70,29 @@ export default function Footer() {
             <h3 className="mb-4 text-xs font-semibold uppercase tracking-wider text-red-500">
               Contacto
             </h3>
-            <p className="text-sm text-zinc-400">
+            <p className="text-sm text-zinc-600 dark:text-zinc-400">
               Reservas y consultas
             </p>
             <a
               href={`https://wa.me/${WHATSAPP_NUMBER}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-2 inline-block text-sm font-medium text-red-500 transition-colors hover:text-red-400"
+              className="mt-2 inline-block text-sm font-medium text-red-500 transition-colors hover:text-red-600 dark:hover:text-red-400"
             >
               Escribinos por WhatsApp
             </a>
           </div>
         </div>
-        <div className="mt-12 border-t border-zinc-800 pt-8">
+        <div className="mt-12 border-t border-zinc-300 pt-8 dark:border-zinc-800">
           <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
             <p className="text-sm text-zinc-500">
               © {new Date().getFullYear()} La Ruta Padel. Todos los derechos reservados.
             </p>
             <div className="flex gap-6">
-              <Link href="#" className="text-sm text-zinc-500 transition-colors hover:text-red-500">
+              <Link href="#" className="text-sm text-zinc-500 transition-colors hover:text-red-500 dark:hover:text-red-500">
                 Aviso legal
               </Link>
-              <Link href="#" className="text-sm text-zinc-500 transition-colors hover:text-red-500">
+              <Link href="#" className="text-sm text-zinc-500 transition-colors hover:text-red-500 dark:hover:text-red-500">
                 Privacidad
               </Link>
             </div>
