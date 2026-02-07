@@ -1,10 +1,12 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import type { StaticImageData } from "next/image";
 
 const INTERVAL_MS = 5000;
+const SWIPE_THRESHOLD = 50;
+const PAUSE_AFTER_SWIPE_MS = 4000;
 
 type Props = {
   images: StaticImageData[];
@@ -13,16 +15,69 @@ type Props = {
 export default function HeroCarousel({ images }: Props) {
   const [index, setIndex] = useState(0);
   const total = images.length;
+  const startX = useRef(0);
+  const isPaused = useRef(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  const goTo = useCallback(
+    (next: number) => {
+      setIndex((i) => (i + next + total) % total);
+    },
+    [total]
+  );
 
   useEffect(() => {
     if (total <= 1) return;
-    const id = setInterval(() => setIndex((i) => (i + 1) % total), INTERVAL_MS);
+    const id = setInterval(() => {
+      if (!isPaused.current) goTo(1);
+    }, INTERVAL_MS);
     return () => clearInterval(id);
-  }, [total]);
+  }, [total, goTo]);
+
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+    const onMove = (e: PointerEvent) => {
+      if (startX.current !== 0) e.preventDefault();
+    };
+    el.addEventListener("pointermove", onMove, { passive: false });
+    return () => el.removeEventListener("pointermove", onMove);
+  }, []);
+
+  const handlePointerDown = useCallback(
+    (e: React.PointerEvent) => {
+      startX.current = e.clientX;
+      isPaused.current = true;
+      (e.currentTarget as HTMLDivElement).setPointerCapture(e.pointerId);
+    },
+    []
+  );
+
+  const handlePointerUp = useCallback(
+    (e: React.PointerEvent) => {
+      const endX = e.clientX;
+      const delta = endX - startX.current;
+      startX.current = 0;
+      (e.currentTarget as HTMLDivElement).releasePointerCapture(e.pointerId);
+      if (delta < -SWIPE_THRESHOLD) goTo(1);
+      else if (delta > SWIPE_THRESHOLD) goTo(-1);
+      setTimeout(() => {
+        isPaused.current = false;
+      }, PAUSE_AFTER_SWIPE_MS);
+    },
+    [goTo]
+  );
 
   return (
-    <div className="relative h-full w-full overflow-hidden">
-      <div className="absolute inset-0 z-10 bg-gradient-to-l from-zinc-900 via-transparent to-transparent" />
+    <div
+      ref={containerRef}
+      className="relative h-full w-full touch-none overflow-hidden"
+      style={{ touchAction: "none" }}
+      onPointerDown={handlePointerDown}
+      onPointerUp={handlePointerUp}
+      onPointerCancel={handlePointerUp}
+    >
+      <div className="absolute inset-0 z-10 bg-gradient-to-l from-zinc-900 via-transparent to-transparent pointer-events-none" />
       {images.map((img, i) => (
         <div
           key={i}
@@ -34,19 +89,26 @@ export default function HeroCarousel({ images }: Props) {
             src={img}
             alt={`La Ruta Padel ${i + 1}`}
             fill
-            className="object-cover"
+            className="object-cover select-none drag-none"
+            draggable={false}
             priority={i === 0}
             sizes="(max-width: 768px) 100vw, 50vw"
           />
         </div>
       ))}
       {total > 1 && (
-        <div className="absolute left-1/2 z-20 flex -translate-x-1/2 gap-1 sm:gap-2 [bottom:max(1.5rem,env(safe-area-inset-bottom))]">
+        <div className="absolute left-1/2 z-20 flex -translate-x-1/2 gap-1 sm:gap-2 pointer-events-auto [bottom:max(1.5rem,env(safe-area-inset-bottom))]">
           {images.map((_, i) => (
             <button
               key={i}
               type="button"
-              onClick={() => setIndex(i)}
+              onClick={() => {
+                isPaused.current = true;
+                setIndex(i);
+                setTimeout(() => {
+                  isPaused.current = false;
+                }, PAUSE_AFTER_SWIPE_MS);
+              }}
               className={`flex min-h-[44px] min-w-[44px] items-center justify-center rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-transparent ${
                 i === index ? "scale-110 bg-red-600" : "bg-white/40 hover:bg-white/60"
               }`}
