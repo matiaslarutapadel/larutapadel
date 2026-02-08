@@ -1,6 +1,7 @@
 import Image from "next/image";
 import HeroCarousel from "./components/HeroCarousel";
 import { images } from "./lib/images";
+import { patrocinadores } from "./lib/patrocinadores";
 import { logo, logoAlt, logoDark } from "./lib/logo";
 
 export default function Home() {
@@ -142,6 +143,27 @@ export default function Home() {
                   <div className="absolute inset-0 border-2 border-red-600/0 transition-colors group-hover:border-red-600/50" />
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="patrocinadores" className="border-t border-zinc-300 bg-zinc-200 py-12 dark:border-zinc-800 dark:bg-zinc-900 sm:py-16 md:py-20">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="mb-8 text-center sm:mb-12">
+              <h2 className="mb-2 text-2xl font-bold uppercase tracking-tight text-zinc-900 dark:text-white sm:mb-3 sm:text-3xl md:text-4xl">
+                Patrocinadores
+              </h2>
+              <div className="mx-auto h-1 w-20 rounded-full bg-red-600" />
+            </div>
+            <div className="relative mx-auto max-w-4xl">
+              <Image
+                src={patrocinadores}
+                alt="Patrocinadores La Ruta Padel"
+                width={1200}
+                height={400}
+                className="h-auto w-full object-contain invert dark:invert-0"
+                sizes="(max-width: 768px) 100vw, 896px"
+              />
             </div>
           </div>
         </section>
