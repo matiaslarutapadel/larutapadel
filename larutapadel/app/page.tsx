@@ -10,7 +10,7 @@ export default function Home() {
     <div className="min-h-screen min-w-0 bg-zinc-100 dark:bg-zinc-900">
       <main className="min-w-0 overflow-x-hidden">
         <section className="relative grid min-h-[80dvh] grid-cols-1 md:min-h-[85vh] md:grid-cols-2">
-          <div className="flex min-w-0 flex-col justify-center bg-zinc-200 px-4 py-10 sm:px-6 sm:py-16 md:px-8 md:py-20 lg:px-16">
+          <div className="flex min-w-0 flex-col justify-center bg-zinc-200 px-4 py-10 dark:bg-zinc-800 sm:px-6 sm:py-16 md:px-8 md:py-20 lg:px-16">
             <div className="relative mb-6 sm:mb-8">
               <Image
                 src={logo}
@@ -61,7 +61,7 @@ export default function Home() {
               </a>
               <a
                 href="#el-club"
-                className="inline-flex min-h-[48px] min-w-[120px] items-center justify-center rounded-lg border border-red-600/50 px-6 py-3 text-sm font-semibold text-red-500 transition-colors hover:bg-red-600/10 dark:border-red-400/50 dark:text-red-400 dark:hover:bg-red-600/20 sm:text-base"
+                className="inline-flex min-h-[48px] min-w-[120px] items-center justify-center rounded-lg border border-red-600/50 px-6 py-3 text-sm font-semibold text-red-500 transition-colors hover:bg-red-600/10 dark:border-red-400 dark:text-red-400 dark:hover:bg-red-500/20 dark:hover:border-red-400 sm:text-base"
               >
                 EL CLUB
               </a>
