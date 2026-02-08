@@ -11,7 +11,7 @@ const NAV = [
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-40 border-b border-zinc-200 bg-white shadow dark:border-red-950/30 dark:bg-zinc-900 dark:shadow-lg [padding-top:env(safe-area-inset-top)]">
+    <header className="sticky top-0 z-40 border-b border-zinc-200 bg-white shadow dark:border-zinc-700 dark:bg-zinc-800 dark:shadow-lg [padding-top:env(safe-area-inset-top)]">
       <div className="mx-auto flex min-h-14 max-w-7xl items-center justify-between gap-3 px-3 sm:h-16 sm:px-6 lg:px-8">
         <Link href="/" className="relative flex shrink-0 items-center">
           <Image

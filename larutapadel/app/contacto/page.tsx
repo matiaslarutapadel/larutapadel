@@ -7,7 +7,7 @@ const INSTAGRAM_URL = "https://www.instagram.com/larutapadel_club/";
 
 export default function ContactoPage() {
   return (
-    <div className="min-h-screen bg-zinc-100 dark:bg-zinc-950">
+    <div className="min-h-screen bg-zinc-100 dark:bg-zinc-900">
       <main>
         <section className="relative min-h-[65dvh] sm:min-h-[70vh]">
           <div className="absolute inset-0">
@@ -34,7 +34,7 @@ export default function ContactoPage() {
           </div>
         </section>
 
-        <section className="border-t border-zinc-300 bg-zinc-200 py-12 dark:border-zinc-800 dark:bg-zinc-900 sm:py-16 lg:py-20">
+        <section className="border-t border-zinc-300 bg-zinc-200 py-12 dark:border-zinc-700 dark:bg-zinc-800 sm:py-16 lg:py-20">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid gap-8 lg:grid-cols-2 lg:gap-12">
               <div className="relative aspect-[4/3] overflow-hidden rounded-xl sm:rounded-2xl">
@@ -53,7 +53,7 @@ export default function ContactoPage() {
               </div>
               <div className="flex flex-col justify-center space-y-6 sm:space-y-8">
                 <div>
-                  <h2 className="mb-4 text-xl font-bold uppercase tracking-tight text-zinc-900 dark:text-white sm:mb-6 sm:text-2xl">
+                  <h2 className="mb-4 text-xl font-bold uppercase tracking-tight text-zinc-900 dark:text-zinc-100 sm:mb-6 sm:text-2xl">
                     La Ruta Pádel Club
                   </h2>
                   <p className="mb-2 text-sm text-zinc-600 dark:text-zinc-400 sm:text-base">
@@ -63,6 +63,18 @@ export default function ContactoPage() {
                     <span>📍</span>
                     Pucalan Parcela 27, Nogales
                   </p>
+                  <div className="mt-4 w-full overflow-hidden rounded-xl border border-zinc-300 dark:border-zinc-600">
+                    <iframe
+                      src="https://www.google.com/maps?q=Pucalan+Parcela+27,+Nogales,+Chile&output=embed"
+                      width="100%"
+                      height="280"
+                      style={{ border: 0 }}
+                      allowFullScreen
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                      title="Ubicación La Ruta Pádel - Pucalan Parcela 27, Nogales"
+                    />
+                  </div>
                 </div>
                 <div className="flex flex-col gap-3 sm:flex-row sm:gap-4">
                   <a
@@ -80,7 +92,7 @@ export default function ContactoPage() {
                     href={INSTAGRAM_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex min-h-[48px] flex-1 items-center justify-center gap-2 rounded-xl border-2 border-zinc-400 bg-transparent px-6 py-3.5 font-semibold text-zinc-700 transition-colors hover:bg-zinc-100 dark:border-zinc-500 dark:text-zinc-300 dark:hover:bg-zinc-800 sm:py-4"
+                    className="inline-flex min-h-[48px] flex-1 items-center justify-center gap-2 rounded-xl border-2 border-zinc-400 bg-transparent px-6 py-3.5 font-semibold text-zinc-700 transition-colors hover:bg-zinc-100 dark:border-zinc-500 dark:text-zinc-300 dark:hover:bg-zinc-700 sm:py-4"
                   >
                     <svg className="h-5 w-5 sm:h-6 sm:w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
                       <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
@@ -98,9 +110,9 @@ export default function ContactoPage() {
           </div>
         </section>
 
-        <section className="border-t border-zinc-300 bg-zinc-100 py-12 dark:border-zinc-800 dark:bg-zinc-950 sm:py-16 lg:py-20">
+        <section className="border-t border-zinc-300 bg-zinc-100 py-12 dark:border-zinc-700 dark:bg-zinc-900 sm:py-16 lg:py-20">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <h2 className="mb-8 text-center text-xl font-bold uppercase tracking-tight text-zinc-900 dark:text-white sm:mb-12 sm:text-2xl">
+            <h2 className="mb-8 text-center text-xl font-bold uppercase tracking-tight text-zinc-900 dark:text-zinc-100 sm:mb-12 sm:text-2xl">
               El club
             </h2>
             <div className="grid gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3">

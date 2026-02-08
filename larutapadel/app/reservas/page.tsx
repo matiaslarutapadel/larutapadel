@@ -6,7 +6,7 @@ const WHATSAPP_NUMBER = "56963223271";
 
 export default function ReservasPage() {
   return (
-    <div className="min-h-screen bg-zinc-100 dark:bg-zinc-950">
+    <div className="min-h-screen bg-zinc-100 dark:bg-zinc-900">
       <main>
         <section className="relative min-h-[65dvh] sm:min-h-[70vh]">
           <div className="absolute inset-0">
@@ -33,7 +33,7 @@ export default function ReservasPage() {
           </div>
         </section>
 
-        <section className="border-t border-zinc-300 bg-zinc-200 py-12 dark:border-zinc-800 dark:bg-zinc-900 sm:py-16 lg:py-20">
+        <section className="border-t border-zinc-300 bg-zinc-200 py-12 dark:border-zinc-700 dark:bg-zinc-800 sm:py-16 lg:py-20">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid gap-8 lg:grid-cols-2 lg:gap-12">
               <div className="relative aspect-[4/3] overflow-hidden rounded-xl sm:rounded-2xl">
@@ -51,7 +51,7 @@ export default function ReservasPage() {
                 </div>
               </div>
               <div className="flex flex-col justify-center">
-                <h2 className="mb-3 text-xl font-bold uppercase tracking-tight text-zinc-900 dark:text-white sm:mb-4 sm:text-2xl md:text-3xl">
+                <h2 className="mb-3 text-xl font-bold uppercase tracking-tight text-zinc-900 dark:text-zinc-100 sm:mb-4 sm:text-2xl md:text-3xl">
                   Cómo reservar
                 </h2>
                 <ol className="space-y-3 text-zinc-600 dark:text-zinc-400 sm:space-y-4">
@@ -60,7 +60,7 @@ export default function ReservasPage() {
                       1
                     </span>
                     <div>
-                      <span className="text-sm font-semibold text-zinc-900 dark:text-white sm:text-base">Escribinos por WhatsApp</span>
+                      <span className="text-sm font-semibold text-zinc-900 dark:text-zinc-100 sm:text-base">Escribinos por WhatsApp</span>
                       <p className="text-xs sm:text-sm">Indicanos el día y horario que querés jugar.</p>
                     </div>
                   </li>
@@ -69,7 +69,7 @@ export default function ReservasPage() {
                       2
                     </span>
                     <div>
-                      <span className="text-sm font-semibold text-zinc-900 dark:text-white sm:text-base">Te confirmamos al instante</span>
+                      <span className="text-sm font-semibold text-zinc-900 dark:text-zinc-100 sm:text-base">Te confirmamos al instante</span>
                       <p className="text-xs sm:text-sm">Te respondemos con la disponibilidad y el valor.</p>
                     </div>
                   </li>
@@ -78,7 +78,7 @@ export default function ReservasPage() {
                       3
                     </span>
                     <div>
-                      <span className="text-sm font-semibold text-zinc-900 dark:text-white sm:text-base">¡A jugar!</span>
+                      <span className="text-sm font-semibold text-zinc-900 dark:text-zinc-100 sm:text-base">¡A jugar!</span>
                       <p className="text-xs sm:text-sm">Venite a Pucalan Parcela 27, Nogales.</p>
                     </div>
                   </li>
@@ -99,9 +99,9 @@ export default function ReservasPage() {
           </div>
         </section>
 
-        <section className="border-t border-zinc-300 bg-zinc-100 py-12 dark:border-zinc-800 dark:bg-zinc-950 sm:py-16 lg:py-20">
+        <section className="border-t border-zinc-300 bg-zinc-100 py-12 dark:border-zinc-700 dark:bg-zinc-900 sm:py-16 lg:py-20">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <h2 className="mb-8 text-center text-xl font-bold uppercase tracking-tight text-zinc-900 dark:text-white sm:mb-12 sm:text-2xl">
+            <h2 className="mb-8 text-center text-xl font-bold uppercase tracking-tight text-zinc-900 dark:text-zinc-100 sm:mb-12 sm:text-2xl">
               Nuestras canchas
             </h2>
             <div className="grid gap-3 sm:grid-cols-3 sm:gap-4">

@@ -15,7 +15,7 @@ const INSTAGRAM_URL = "https://www.instagram.com/larutapadel_club/";
 
 export default function Footer() {
   return (
-    <footer className="overflow-x-hidden border-t border-zinc-300 bg-zinc-200 dark:border-red-900/40 dark:bg-zinc-900 pb-[max(5rem,env(safe-area-inset-bottom))] sm:pb-4 sm:[padding-bottom:env(safe-area-inset-bottom)]">
+    <footer className="overflow-x-hidden border-t border-zinc-300 bg-zinc-200 dark:border-zinc-700 dark:bg-zinc-800 pb-[max(5rem,env(safe-area-inset-bottom))] sm:pb-4 sm:[padding-bottom:env(safe-area-inset-bottom)]">
       <div className="mx-auto min-w-0 max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
         <div className="grid min-w-0 grid-cols-1 gap-10 sm:gap-12 md:grid-cols-2 lg:grid-cols-4">
           <div className="md:col-span-2 lg:col-span-2">
@@ -58,7 +58,7 @@ export default function Footer() {
                 href={INSTAGRAM_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex min-h-[44px] items-center gap-2 rounded-lg border border-zinc-400 bg-transparent px-5 py-3 text-sm font-semibold text-zinc-700 transition-colors hover:bg-zinc-100 dark:border-zinc-500 dark:text-zinc-300 dark:hover:bg-zinc-800"
+                className="inline-flex min-h-[44px] items-center gap-2 rounded-lg border border-zinc-400 bg-transparent px-5 py-3 text-sm font-semibold text-zinc-700 transition-colors hover:bg-zinc-100 dark:border-zinc-500 dark:text-zinc-300 dark:hover:bg-zinc-700"
                 aria-label="Instagram La Ruta Padel"
               >
                 <svg className="h-5 w-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
@@ -120,7 +120,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="mt-10 border-t border-zinc-300 pt-6 dark:border-zinc-800 sm:mt-12 sm:pt-8">
+        <div className="mt-10 border-t border-zinc-300 pt-6 dark:border-zinc-700 sm:mt-12 sm:pt-8">
           <div className="flex flex-col items-center gap-3 text-center sm:flex-row sm:justify-between sm:text-left">
             <p className="min-w-0 text-sm leading-snug text-zinc-500">
               © {new Date().getFullYear()} La Ruta Padel. Todos los derechos reservados.
