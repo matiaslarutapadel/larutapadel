@@ -17,9 +17,9 @@ const INSTAGRAM_URL = "https://www.instagram.com/larutapadel_club/";
 export default function Footer() {
   return (
     <footer className="overflow-x-hidden border-t border-zinc-300 bg-zinc-200 dark:border-zinc-700 dark:bg-zinc-800 pb-[max(5rem,env(safe-area-inset-bottom))] sm:pb-4 sm:[padding-bottom:env(safe-area-inset-bottom)]">
-      <div className="mx-auto min-w-0 max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
-        <div className="grid min-w-0 grid-cols-1 gap-10 sm:gap-12 md:grid-cols-2 lg:grid-cols-4">
-          <div className="md:col-span-2 lg:col-span-2">
+      <div className="mx-auto min-w-0 max-w-7xl px-4 py-10 sm:px-6 sm:py-16 lg:px-8">
+        <div className="grid min-w-0 grid-cols-1 gap-8 sm:gap-12 md:grid-cols-2 lg:grid-cols-4">
+          <div className="min-w-0 md:col-span-2 lg:col-span-2">
             <Link href="/" className="relative inline-flex items-center">
               <Image
                 src={logo}
@@ -123,7 +123,7 @@ export default function Footer() {
         </div>
         <div className="mt-10 border-t border-zinc-300 pt-6 dark:border-zinc-700 sm:mt-12 sm:pt-8">
           <div className="flex flex-col items-center gap-3 text-center sm:flex-row sm:justify-between sm:text-left">
-            <p className="min-w-0 text-sm leading-snug text-zinc-500">
+            <p className="min-w-0 max-w-full break-words text-sm leading-snug text-zinc-500">
               © {new Date().getFullYear()} La Ruta Padel. Todos los derechos reservados.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">

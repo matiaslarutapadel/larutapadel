@@ -7,8 +7,8 @@ const INSTAGRAM_URL = "https://www.instagram.com/larutapadel_club/";
 
 export default function ContactoPage() {
   return (
-    <div className="min-h-screen bg-zinc-100 dark:bg-zinc-900">
-      <main>
+    <div className="min-h-screen min-w-0 bg-zinc-100 dark:bg-zinc-900">
+      <main className="min-w-0 overflow-x-hidden">
         <section className="relative min-h-[65dvh] sm:min-h-[70vh]">
           <div className="absolute inset-0">
             <Image
@@ -34,10 +34,10 @@ export default function ContactoPage() {
           </div>
         </section>
 
-        <section className="border-t border-zinc-300 bg-zinc-200 py-12 dark:border-zinc-700 dark:bg-zinc-800 sm:py-16 lg:py-20">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="grid gap-8 lg:grid-cols-2 lg:gap-12">
-              <div className="relative aspect-[4/3] overflow-hidden rounded-xl sm:rounded-2xl">
+        <section className="border-t border-zinc-300 bg-zinc-200 py-10 dark:border-zinc-700 dark:bg-zinc-800 sm:py-16 lg:py-20">
+          <div className="mx-auto min-w-0 max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="grid min-w-0 gap-6 lg:grid-cols-2 lg:gap-12">
+              <div className="relative min-w-0 aspect-[4/3] overflow-hidden rounded-xl sm:rounded-2xl">
                 <Image
                   src={images[7]}
                   alt="Club"
@@ -51,7 +51,7 @@ export default function ContactoPage() {
                   <p className="text-lg font-bold sm:text-xl">Pucalan Parcela 27, Nogales</p>
                 </div>
               </div>
-              <div className="flex flex-col justify-center space-y-6 sm:space-y-8">
+              <div className="flex min-w-0 flex-col justify-center space-y-6 sm:space-y-8">
                 <div>
                   <h2 className="mb-4 text-xl font-bold uppercase tracking-tight text-zinc-900 dark:text-zinc-100 sm:mb-6 sm:text-2xl">
                     La Ruta Pádel Club
@@ -63,7 +63,7 @@ export default function ContactoPage() {
                     <span>📍</span>
                     Pucalan Parcela 27, Nogales
                   </p>
-                  <div className="mt-4 w-full overflow-hidden rounded-xl border border-zinc-300 dark:border-zinc-600">
+                  <div className="mt-4 w-full min-w-0 overflow-hidden rounded-xl border border-zinc-300 dark:border-zinc-600">
                     <iframe
                       src="https://www.google.com/maps?q=Pucalan+Parcela+27,+Nogales,+Chile&output=embed"
                       width="100%"
@@ -110,12 +110,12 @@ export default function ContactoPage() {
           </div>
         </section>
 
-        <section className="border-t border-zinc-300 bg-zinc-100 py-12 dark:border-zinc-700 dark:bg-zinc-900 sm:py-16 lg:py-20">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <h2 className="mb-8 text-center text-xl font-bold uppercase tracking-tight text-zinc-900 dark:text-zinc-100 sm:mb-12 sm:text-2xl">
+        <section className="border-t border-zinc-300 bg-zinc-100 py-10 dark:border-zinc-700 dark:bg-zinc-900 sm:py-16 lg:py-20">
+          <div className="mx-auto min-w-0 max-w-7xl px-4 sm:px-6 lg:px-8">
+            <h2 className="mb-6 text-center text-xl font-bold uppercase tracking-tight text-zinc-900 dark:text-zinc-100 sm:mb-12 sm:text-2xl">
               El club
             </h2>
-            <div className="grid gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3">
+            <div className="grid min-w-0 gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3">
               {[images[8], images[9], images[10]].map((img, i) => (
                 <div key={i} className="group relative aspect-[4/3] overflow-hidden rounded-xl">
                   <Image

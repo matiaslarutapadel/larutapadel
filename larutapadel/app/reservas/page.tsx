@@ -6,8 +6,8 @@ const WHATSAPP_NUMBER = "56963223271";
 
 export default function ReservasPage() {
   return (
-    <div className="min-h-screen bg-zinc-100 dark:bg-zinc-900">
-      <main>
+    <div className="min-h-screen min-w-0 bg-zinc-100 dark:bg-zinc-900">
+      <main className="min-w-0 overflow-x-hidden">
         <section className="relative min-h-[65dvh] sm:min-h-[70vh]">
           <div className="absolute inset-0">
             <Image
@@ -33,10 +33,10 @@ export default function ReservasPage() {
           </div>
         </section>
 
-        <section className="border-t border-zinc-300 bg-zinc-200 py-12 dark:border-zinc-700 dark:bg-zinc-800 sm:py-16 lg:py-20">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="grid gap-8 lg:grid-cols-2 lg:gap-12">
-              <div className="relative aspect-[4/3] overflow-hidden rounded-xl sm:rounded-2xl">
+        <section className="border-t border-zinc-300 bg-zinc-200 py-10 dark:border-zinc-700 dark:bg-zinc-800 sm:py-16 lg:py-20">
+          <div className="mx-auto min-w-0 max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="grid min-w-0 gap-6 lg:grid-cols-2 lg:gap-12">
+              <div className="relative min-w-0 aspect-[4/3] overflow-hidden rounded-xl sm:rounded-2xl">
                 <Image
                   src={images[2]}
                   alt="Canchas"
@@ -50,7 +50,7 @@ export default function ReservasPage() {
                   <p className="text-lg font-bold sm:text-xl">Full panorámicas</p>
                 </div>
               </div>
-              <div className="flex flex-col justify-center">
+              <div className="flex min-w-0 flex-col justify-center">
                 <h2 className="mb-3 text-xl font-bold uppercase tracking-tight text-zinc-900 dark:text-zinc-100 sm:mb-4 sm:text-2xl md:text-3xl">
                   Cómo reservar
                 </h2>
@@ -99,12 +99,12 @@ export default function ReservasPage() {
           </div>
         </section>
 
-        <section className="border-t border-zinc-300 bg-zinc-100 py-12 dark:border-zinc-700 dark:bg-zinc-900 sm:py-16 lg:py-20">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <h2 className="mb-8 text-center text-xl font-bold uppercase tracking-tight text-zinc-900 dark:text-zinc-100 sm:mb-12 sm:text-2xl">
+        <section className="border-t border-zinc-300 bg-zinc-100 py-10 dark:border-zinc-700 dark:bg-zinc-900 sm:py-16 lg:py-20">
+          <div className="mx-auto min-w-0 max-w-7xl px-4 sm:px-6 lg:px-8">
+            <h2 className="mb-6 text-center text-xl font-bold uppercase tracking-tight text-zinc-900 dark:text-zinc-100 sm:mb-12 sm:text-2xl">
               Nuestras canchas
             </h2>
-            <div className="grid gap-3 sm:grid-cols-3 sm:gap-4">
+            <div className="grid min-w-0 grid-cols-1 gap-3 sm:grid-cols-3 sm:gap-4">
               {[images[3], images[4], images[5]].map((img, i) => (
                 <div key={i} className="group relative aspect-[4/3] overflow-hidden rounded-xl">
                   <Image

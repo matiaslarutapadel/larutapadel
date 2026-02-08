@@ -7,10 +7,10 @@ import { logo, logoAlt, logoDark } from "./lib/logo";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-zinc-100 dark:bg-zinc-900">
-      <main>
+    <div className="min-h-screen min-w-0 bg-zinc-100 dark:bg-zinc-900">
+      <main className="min-w-0 overflow-x-hidden">
         <section className="relative grid min-h-[80dvh] grid-cols-1 md:min-h-[85vh] md:grid-cols-2">
-          <div className="flex flex-col justify-center bg-zinc-200 px-4 py-12 dark:bg-zinc-800 sm:px-6 sm:py-16 md:px-8 md:py-20 lg:px-16">
+          <div className="flex min-w-0 flex-col justify-center bg-zinc-200 px-4 py-10 sm:px-6 sm:py-16 md:px-8 md:py-20 lg:px-16">
             <div className="relative mb-6 sm:mb-8">
               <Image
                 src={logo}
@@ -71,13 +71,13 @@ export default function Home() {
               </a>
             </div>
           </div>
-          <div className="relative h-[45vh] min-h-[280px] sm:h-[50vh] md:h-auto md:min-h-[85vh]">
+          <div className="relative min-w-0 h-[45vh] min-h-[260px] sm:h-[50vh] sm:min-h-[280px] md:h-auto md:min-h-[85vh]">
             <HeroCarousel images={images.slice(0, 6)} />
           </div>
         </section>
 
-        <section id="el-club" className="border-t border-zinc-300 bg-zinc-200 py-12 dark:border-zinc-700 dark:bg-zinc-800 sm:py-16 md:py-20">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <section id="el-club" className="border-t border-zinc-300 bg-zinc-200 py-10 dark:border-zinc-700 dark:bg-zinc-800 sm:py-16 md:py-20">
+          <div className="mx-auto min-w-0 max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mb-10 text-center sm:mb-14">
               <h2 className="mb-2 text-2xl font-bold uppercase tracking-tight text-zinc-900 dark:text-zinc-100 sm:mb-3 sm:text-3xl md:text-4xl">
                 EL CLUB
@@ -91,7 +91,7 @@ export default function Home() {
                 Pucalan Parcela 27, Nogales
               </p>
             </div>
-            <div className="mb-8 flex flex-wrap justify-center gap-3 sm:mb-12 sm:gap-6 md:gap-10">
+            <div className="mb-6 flex min-w-0 flex-wrap justify-center gap-2 sm:mb-12 sm:gap-6 md:gap-10">
               <div className="flex items-center gap-2 rounded-xl border border-zinc-300 bg-white/60 px-4 py-2.5 dark:border-zinc-600 dark:bg-zinc-700/50 sm:px-5 sm:py-3">
                 <svg className="h-5 w-5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
@@ -112,7 +112,7 @@ export default function Home() {
                 <span className="font-medium text-zinc-800 dark:text-zinc-200">Próximamente canchas techadas</span>
               </div>
             </div>
-            <div className="grid gap-3 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="grid min-w-0 gap-3 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {[images[1], images[2], images[3], images[4], images[5], images[6]].map((img, i) => (
                 <div key={i} className="group relative aspect-[4/3] overflow-hidden rounded-xl">
                   <Image
@@ -129,15 +129,15 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="border-t border-zinc-300 bg-zinc-200 py-12 dark:border-zinc-700 dark:bg-zinc-800 sm:py-16 md:py-20">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="mb-8 text-center sm:mb-14">
+        <section className="border-t border-zinc-300 bg-zinc-200 py-10 dark:border-zinc-700 dark:bg-zinc-800 sm:py-16 md:py-20">
+          <div className="mx-auto min-w-0 max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="mb-6 text-center sm:mb-14">
               <h2 className="mb-2 text-2xl font-bold uppercase tracking-tight text-zinc-900 dark:text-zinc-100 sm:mb-3 sm:text-3xl md:text-4xl">
                 GALERÍA
               </h2>
               <div className="mx-auto h-1 w-20 rounded-full bg-red-600" />
             </div>
-            <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 sm:gap-3 md:gap-4 lg:grid-cols-5">
+            <div className="grid min-w-0 grid-cols-2 gap-2 sm:grid-cols-3 sm:gap-3 md:gap-4 lg:grid-cols-5">
               {images.map((img, i) => (
                 <div key={i} className="group relative aspect-square overflow-hidden rounded-lg">
                   <Image
@@ -154,8 +154,8 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="patrocinadores" className="border-t border-zinc-300 bg-zinc-200 py-12 dark:border-zinc-700 dark:bg-zinc-800 sm:py-16 md:py-20">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <section id="patrocinadores" className="border-t border-zinc-300 bg-zinc-200 py-10 dark:border-zinc-700 dark:bg-zinc-800 sm:py-16 md:py-20">
+          <div className="mx-auto min-w-0 max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mb-8 text-center sm:mb-12">
               <h2 className="mb-2 text-2xl font-bold uppercase tracking-tight text-zinc-900 dark:text-zinc-100 sm:mb-3 sm:text-3xl md:text-4xl">
                 Patrocinadores
@@ -175,9 +175,9 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="contacto" className="border-t border-zinc-300 bg-zinc-100 py-12 dark:border-zinc-700 dark:bg-zinc-900 sm:py-16 md:py-20">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="grid gap-6 sm:gap-8 md:grid-cols-2 md:gap-12 lg:grid-cols-3">
+        <section id="contacto" className="border-t border-zinc-300 bg-zinc-100 py-10 dark:border-zinc-700 dark:bg-zinc-900 sm:py-16 md:py-20">
+          <div className="mx-auto min-w-0 max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="grid min-w-0 gap-4 sm:gap-8 md:grid-cols-2 md:gap-12 lg:grid-cols-3">
               <div className="relative aspect-video overflow-hidden rounded-xl">
                 <Image src={images[9]} alt="Contacto" fill className="object-cover" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" />
               </div>
@@ -188,7 +188,7 @@ export default function Home() {
                 <Image src={images[11]} alt="Club" fill className="object-cover" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" />
               </div>
             </div>
-            <div className="mt-10 flex flex-col items-center justify-center rounded-2xl border border-red-600/30 bg-zinc-200 px-4 py-10 text-center dark:bg-zinc-800/50 sm:mt-16 sm:px-6 sm:py-12">
+            <div className="mt-8 flex min-w-0 flex-col items-center justify-center rounded-2xl border border-red-600/30 bg-zinc-200 px-4 py-8 text-center sm:mt-16 sm:px-6 sm:py-12">
               <h2 className="mb-2 text-xl font-bold text-zinc-900 dark:text-zinc-100 sm:text-2xl">LA RUTA PÁDEL CLUB</h2>
               <p className="mb-1 text-xs text-zinc-600 dark:text-zinc-400 sm:text-sm">Tres canchas full panorámicas</p>
               <p className="mb-4 flex items-center justify-center gap-2 text-xs text-zinc-600 dark:text-zinc-400 sm:mb-6 sm:text-sm">
