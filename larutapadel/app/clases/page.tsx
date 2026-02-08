@@ -6,7 +6,7 @@ const WHATSAPP_NUMBER = "56963223271";
 
 export default function ClasesPage() {
   return (
-    <div className="min-h-screen min-w-0 bg-zinc-100 dark:bg-zinc-950">
+    <div className="min-h-screen min-w-0 bg-zinc-100 dark:bg-zinc-900">
       <main className="min-w-0 overflow-x-hidden">
         <section className="relative min-h-[65dvh] sm:min-h-[70vh]">
           <div className="absolute inset-0">
@@ -35,7 +35,7 @@ export default function ClasesPage() {
 
         <section className="border-t border-zinc-300 bg-zinc-200 py-10 dark:border-zinc-700 dark:bg-zinc-800 sm:py-16 lg:py-20">
           <div className="mx-auto min-w-0 max-w-7xl px-4 sm:px-6 lg:px-8">
-            <h2 className="mb-6 text-center text-xl font-bold uppercase tracking-tight text-zinc-900 dark:text-white sm:mb-12 sm:text-2xl">
+            <h2 className="mb-6 text-center text-xl font-bold uppercase tracking-tight text-zinc-900 dark:text-zinc-100 sm:mb-12 sm:text-2xl">
               Clases en La Ruta
             </h2>
             <div className="grid min-w-0 grid-cols-2 gap-2 sm:grid-cols-2 sm:gap-4 lg:grid-cols-4">

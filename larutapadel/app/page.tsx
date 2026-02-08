@@ -30,7 +30,7 @@ export default function Home() {
             </div>
             <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-red-500 sm:mb-4 sm:text-sm">Bienvenidos</p>
             <p className="mb-3 max-w-md text-sm text-zinc-600 dark:text-zinc-400 sm:mb-4 sm:text-base">
-              Club de pádel. Tres canchas full panorámicas, cafetería y amplio estacionamiento. Próximamente canchas techadas.
+              Club de pádel. Tres canchas full panorámicas, cafetería y amplio estacionamiento.
             </p>
             <p className="mb-6 flex items-center gap-2 text-xs text-zinc-600 dark:text-zinc-400 sm:mb-8 sm:text-sm">
               <span>📍</span>
@@ -44,10 +44,6 @@ export default function Home() {
               <li className="flex items-center gap-2">
                 <span className="h-1.5 w-1.5 rounded-full bg-red-500" />
                 Amplio estacionamiento
-              </li>
-              <li className="flex items-center gap-2">
-                <span className="rounded bg-red-500/20 px-1.5 py-0.5 text-xs font-medium text-red-600 dark:text-red-400">Próximo</span>
-                Canchas techadas
               </li>
               <li className="flex items-center gap-2">
                 <span className="h-1.5 w-1.5 rounded-full bg-red-500" />
@@ -65,7 +61,7 @@ export default function Home() {
               </a>
               <a
                 href="#el-club"
-                className="inline-flex min-h-[48px] min-w-[120px] items-center justify-center rounded-lg border border-red-600/50 px-6 py-3 text-sm font-semibold text-red-500 transition-colors hover:bg-red-600/10 sm:text-base"
+                className="inline-flex min-h-[48px] min-w-[120px] items-center justify-center rounded-lg border border-red-600/50 px-6 py-3 text-sm font-semibold text-red-500 transition-colors hover:bg-red-600/10 dark:border-red-400/50 dark:text-red-400 dark:hover:bg-red-600/20 sm:text-base"
               >
                 EL CLUB
               </a>
@@ -84,7 +80,7 @@ export default function Home() {
               </h2>
               <div className="mx-auto h-1 w-20 rounded-full bg-red-600" />
               <p className="mx-auto mt-3 max-w-2xl text-sm text-zinc-600 dark:text-zinc-400 sm:mt-4 sm:text-base">
-                Club de pádel. Tres canchas full panorámicas, vestuarios, cafetería y amplio estacionamiento. Próximamente canchas techadas.
+                Club de pádel. Tres canchas full panorámicas, vestuarios, cafetería y amplio estacionamiento.
               </p>
               <p className="mx-auto mt-2 flex items-center justify-center gap-2 text-xs text-zinc-600 dark:text-zinc-400 sm:mt-3 sm:text-sm">
                 <span>📍</span>
@@ -104,12 +100,6 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
                 <span className="font-medium text-zinc-800 dark:text-zinc-200">Amplio estacionamiento</span>
-              </div>
-              <div className="flex items-center gap-2 rounded-xl border border-red-200 bg-red-50 px-4 py-2.5 dark:border-red-900/50 dark:bg-red-950/30 sm:px-5 sm:py-3">
-                <svg className="h-5 w-5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                </svg>
-                <span className="font-medium text-zinc-800 dark:text-zinc-200">Próximamente canchas techadas</span>
               </div>
             </div>
             <div className="grid min-w-0 gap-3 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -188,7 +178,7 @@ export default function Home() {
                 <Image src={images[11]} alt="Club" fill className="object-cover" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" />
               </div>
             </div>
-            <div className="mt-8 flex min-w-0 flex-col items-center justify-center rounded-2xl border border-red-600/30 bg-zinc-200 px-4 py-8 text-center sm:mt-16 sm:px-6 sm:py-12">
+            <div className="mt-8 flex min-w-0 flex-col items-center justify-center rounded-2xl border border-red-600/30 bg-zinc-200 px-4 py-8 text-center dark:border-red-500/40 dark:bg-zinc-800 sm:mt-16 sm:px-6 sm:py-12">
               <h2 className="mb-2 text-xl font-bold text-zinc-900 dark:text-zinc-100 sm:text-2xl">LA RUTA PÁDEL CLUB</h2>
               <p className="mb-1 text-xs text-zinc-600 dark:text-zinc-400 sm:text-sm">Tres canchas full panorámicas</p>
               <p className="mb-4 flex items-center justify-center gap-2 text-xs text-zinc-600 dark:text-zinc-400 sm:mb-6 sm:text-sm">

@@ -37,7 +37,7 @@ export default function Footer() {
               />
             </Link>
             <p className="mt-6 max-w-sm text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
-              Club de pádel. Tres canchas full panorámicas, cafetería y amplio estacionamiento. Próximamente canchas techadas.
+              Club de pádel. Tres canchas full panorámicas, cafetería y amplio estacionamiento.
             </p>
             <p className="mt-2 flex items-center gap-2 text-sm text-zinc-600 dark:text-zinc-400">
               <span>📍</span>
@@ -123,14 +123,14 @@ export default function Footer() {
         </div>
         <div className="mt-10 border-t border-zinc-300 pt-6 dark:border-zinc-700 sm:mt-12 sm:pt-8">
           <div className="flex flex-col items-center gap-3 text-center sm:flex-row sm:justify-between sm:text-left">
-            <p className="min-w-0 max-w-full break-words text-sm leading-snug text-zinc-500">
+            <p className="min-w-0 max-w-full break-words text-sm leading-snug text-zinc-500 dark:text-zinc-400">
               © {new Date().getFullYear()} La Ruta Padel. Todos los derechos reservados.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
-              <Link href="#" className="inline-flex items-center py-2 text-sm text-zinc-500 transition-colors hover:text-red-500 dark:hover:text-red-500">
+              <Link href="#" className="inline-flex items-center py-2 text-sm text-zinc-500 transition-colors hover:text-red-500 dark:text-zinc-400 dark:hover:text-red-400">
                 Aviso legal
               </Link>
-              <Link href="#" className="inline-flex items-center py-2 text-sm text-zinc-500 transition-colors hover:text-red-500 dark:hover:text-red-500">
+              <Link href="#" className="inline-flex items-center py-2 text-sm text-zinc-500 transition-colors hover:text-red-500 dark:text-zinc-400 dark:hover:text-red-400">
                 Privacidad
               </Link>
             </div>
