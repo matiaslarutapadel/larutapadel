@@ -15,10 +15,10 @@ const INSTAGRAM_URL = "https://www.instagram.com/larutapadel_club/";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-zinc-300 bg-zinc-200 dark:border-red-900/40 dark:bg-zinc-900 [padding-bottom:env(safe-area-inset-bottom)]">
-      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
-        <div className="grid gap-10 sm:gap-12 lg:grid-cols-4">
-          <div className="lg:col-span-2">
+    <footer className="overflow-x-hidden border-t border-zinc-300 bg-zinc-200 dark:border-red-900/40 dark:bg-zinc-900 pb-[max(5rem,env(safe-area-inset-bottom))] sm:pb-4 sm:[padding-bottom:env(safe-area-inset-bottom)]">
+      <div className="mx-auto min-w-0 max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
+        <div className="grid min-w-0 grid-cols-1 gap-10 sm:gap-12 md:grid-cols-2 lg:grid-cols-4">
+          <div className="md:col-span-2 lg:col-span-2">
             <Link href="/" className="relative inline-flex items-center">
               <Image
                 src={logo}
@@ -94,40 +94,42 @@ export default function Footer() {
             <p className="text-sm text-zinc-600 dark:text-zinc-400">
               Reservas y consultas
             </p>
-            <a
-              href={`https://wa.me/${WHATSAPP_NUMBER}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-2 inline-flex min-h-[44px] items-center text-sm font-medium text-red-500 transition-colors hover:text-red-600 dark:hover:text-red-400"
-            >
-              Escribinos por WhatsApp
-            </a>
-            <a
-              href={INSTAGRAM_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-1 inline-flex min-h-[44px] items-center gap-2 text-sm font-medium text-red-500 transition-colors hover:text-red-600 dark:hover:text-red-400"
-              aria-label="Instagram @larutapadel_club"
-            >
-              <svg className="h-4 w-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
-                <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
-                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
-              </svg>
-              @larutapadel_club
-            </a>
+            <div className="mt-2 flex flex-col gap-1.5">
+              <a
+                href={`https://wa.me/${WHATSAPP_NUMBER}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex w-fit items-center text-sm font-medium text-red-500 transition-colors hover:text-red-600 dark:hover:text-red-400"
+              >
+                Escribinos por WhatsApp
+              </a>
+              <a
+                href={INSTAGRAM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex w-fit items-center gap-2 text-sm font-medium text-red-500 transition-colors hover:text-red-600 dark:hover:text-red-400"
+                aria-label="Instagram @larutapadel_club"
+              >
+                <svg className="h-4 w-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                  <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                </svg>
+                <span>@larutapadel_club</span>
+              </a>
+            </div>
           </div>
         </div>
-        <div className="mt-12 border-t border-zinc-300 pt-8 dark:border-zinc-800">
-          <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
-            <p className="text-sm text-zinc-500">
+        <div className="mt-10 border-t border-zinc-300 pt-6 dark:border-zinc-800 sm:mt-12 sm:pt-8">
+          <div className="flex flex-col items-center gap-3 text-center sm:flex-row sm:justify-between sm:text-left">
+            <p className="min-w-0 text-sm leading-snug text-zinc-500">
               © {new Date().getFullYear()} La Ruta Padel. Todos los derechos reservados.
             </p>
-            <div className="flex flex-wrap gap-4 sm:gap-6">
-              <Link href="#" className="inline-flex min-h-[44px] items-center text-sm text-zinc-500 transition-colors hover:text-red-500 dark:hover:text-red-500">
+            <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
+              <Link href="#" className="inline-flex items-center py-2 text-sm text-zinc-500 transition-colors hover:text-red-500 dark:hover:text-red-500">
                 Aviso legal
               </Link>
-              <Link href="#" className="inline-flex min-h-[44px] items-center text-sm text-zinc-500 transition-colors hover:text-red-500 dark:hover:text-red-500">
+              <Link href="#" className="inline-flex items-center py-2 text-sm text-zinc-500 transition-colors hover:text-red-500 dark:hover:text-red-500">
                 Privacidad
               </Link>
             </div>

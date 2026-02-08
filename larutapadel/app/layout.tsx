@@ -34,7 +34,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} min-w-0 bg-zinc-100 text-zinc-900 antialiased dark:bg-zinc-950 dark:text-white [padding-left:env(safe-area-inset-left)] [padding-right:env(safe-area-inset-right)]`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} min-w-0 overflow-x-hidden bg-zinc-100 text-zinc-900 antialiased dark:bg-zinc-950 dark:text-white [padding-left:env(safe-area-inset-left)] [padding-right:env(safe-area-inset-right)]`}>
         <Header />
         {children}
         <Footer />
