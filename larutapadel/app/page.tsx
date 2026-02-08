@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import HeroCarousel from "./components/HeroCarousel";
 import { images } from "./lib/images";
 import { patrocinadores } from "./lib/patrocinadores";
@@ -47,6 +48,12 @@ export default function Home() {
               <li className="flex items-center gap-2">
                 <span className="rounded bg-red-500/20 px-1.5 py-0.5 text-xs font-medium text-red-600 dark:text-red-400">Próximo</span>
                 Canchas techadas
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="h-1.5 w-1.5 rounded-full bg-red-500" />
+                <Link href="/clases" className="text-zinc-600 transition-colors hover:text-red-500 dark:text-zinc-400 dark:hover:text-red-500">
+                  Clases de pádel
+                </Link>
               </li>
             </ul>
             <div className="flex flex-wrap gap-3 sm:gap-4">

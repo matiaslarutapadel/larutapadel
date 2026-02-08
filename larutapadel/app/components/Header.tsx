@@ -6,6 +6,7 @@ import ThemeToggle from "./ThemeToggle";
 const NAV = [
   { label: "INICIO", href: "/" },
   { label: "RESERVAS", href: "/reservas" },
+  { label: "CLASES", href: "/clases" },
   { label: "CONTACTO", href: "/contacto" },
 ];
 
