@@ -97,7 +97,10 @@ export default function HeroCarousel({ images }: Props) {
         </div>
       ))}
       {total > 1 && (
-        <div className="absolute left-1/2 z-20 flex -translate-x-1/2 gap-1 sm:gap-2 pointer-events-auto [bottom:max(1.5rem,env(safe-area-inset-bottom))]">
+        <div
+          className="absolute left-1/2 z-20 flex -translate-x-1/2 gap-1 [bottom:max(1rem,env(safe-area-inset-bottom))]"
+          onPointerDown={(e) => e.stopPropagation()}
+        >
           {images.map((_, i) => (
             <button
               key={i}
@@ -109,13 +112,11 @@ export default function HeroCarousel({ images }: Props) {
                   isPaused.current = false;
                 }, PAUSE_AFTER_SWIPE_MS);
               }}
-              className={`flex min-h-[28px] min-w-[28px] items-center justify-center rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-transparent sm:min-h-[44px] sm:min-w-[44px] ${
-                i === index ? "scale-110 bg-red-600" : "bg-white/40 hover:bg-white/60"
+              className={`flex h-2 w-2 items-center justify-center rounded-full p-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-1 sm:h-2.5 sm:w-2.5 ${
+                i === index ? "scale-125 bg-red-600" : "bg-white/50 hover:bg-white/70"
               }`}
               aria-label={`Ir a imagen ${i + 1}`}
-            >
-              <span className={`rounded-full ${i === index ? "h-1.5 w-1.5 scale-125 bg-white sm:h-2 sm:w-2" : "h-1.5 w-1.5 bg-white/80 sm:h-2 sm:w-2"}`} />
-            </button>
+            />
           ))}
         </div>
       )}
