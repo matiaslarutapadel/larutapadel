@@ -33,7 +33,7 @@ export default function ReservasPage() {
           </div>
         </section>
 
-        <section className="border-t border-zinc-300 bg-zinc-200 py-10 dark:border-zinc-700 dark:bg-zinc-800 sm:py-16 lg:py-20">
+        <section className="border-t border-zinc-300 bg-zinc-200 py-8 dark:border-zinc-700 dark:bg-zinc-800 sm:py-16 lg:py-20">
           <div className="mx-auto min-w-0 max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid min-w-0 gap-6 lg:grid-cols-2 lg:gap-12">
               <div className="relative min-w-0 aspect-[4/3] overflow-hidden rounded-xl sm:rounded-2xl">
@@ -99,7 +99,7 @@ export default function ReservasPage() {
           </div>
         </section>
 
-        <section className="border-t border-zinc-300 bg-zinc-100 py-10 dark:border-zinc-700 dark:bg-zinc-900 sm:py-16 lg:py-20">
+        <section className="border-t border-zinc-300 bg-zinc-100 py-8 dark:border-zinc-700 dark:bg-zinc-900 sm:py-16 lg:py-20">
           <div className="mx-auto min-w-0 max-w-7xl px-4 sm:px-6 lg:px-8">
             <h2 className="mb-6 text-center text-xl font-bold uppercase tracking-tight text-zinc-900 dark:text-zinc-100 sm:mb-12 sm:text-2xl">
               Nuestras canchas

@@ -34,7 +34,7 @@ export default function ContactoPage() {
           </div>
         </section>
 
-        <section className="border-t border-zinc-300 bg-zinc-200 py-10 dark:border-zinc-700 dark:bg-zinc-800 sm:py-16 lg:py-20">
+        <section className="border-t border-zinc-300 bg-zinc-200 py-8 dark:border-zinc-700 dark:bg-zinc-800 sm:py-16 lg:py-20">
           <div className="mx-auto min-w-0 max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid min-w-0 gap-6 lg:grid-cols-2 lg:gap-12">
               <div className="relative min-w-0 aspect-[4/3] overflow-hidden rounded-xl sm:rounded-2xl">
@@ -67,7 +67,7 @@ export default function ContactoPage() {
                     <iframe
                       src="https://www.google.com/maps?q=Pucalan+Parcela+27,+Nogales,+Chile&output=embed"
                       width="100%"
-                      height="280"
+                      height="240"
                       style={{ border: 0 }}
                       allowFullScreen
                       loading="lazy"
@@ -110,12 +110,12 @@ export default function ContactoPage() {
           </div>
         </section>
 
-        <section className="border-t border-zinc-300 bg-zinc-100 py-10 dark:border-zinc-700 dark:bg-zinc-900 sm:py-16 lg:py-20">
+        <section className="border-t border-zinc-300 bg-zinc-100 py-8 dark:border-zinc-700 dark:bg-zinc-900 sm:py-16 lg:py-20">
           <div className="mx-auto min-w-0 max-w-7xl px-4 sm:px-6 lg:px-8">
             <h2 className="mb-6 text-center text-xl font-bold uppercase tracking-tight text-zinc-900 dark:text-zinc-100 sm:mb-12 sm:text-2xl">
               El club
             </h2>
-            <div className="grid min-w-0 gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3">
+            <div className="grid min-w-0 gap-3 grid-cols-1 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3">
               {[images[8], images[9], images[10]].map((img, i) => (
                 <div key={i} className="group relative aspect-[4/3] overflow-hidden rounded-xl">
                   <Image

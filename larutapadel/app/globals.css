@@ -2,6 +2,15 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+html {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: 100%;
+}
+
+iframe {
+  max-width: 100%;
+}
+
 @layer utilities {
   .scrollbar-hide {
     -ms-overflow-style: none;

@@ -16,9 +16,9 @@ const INSTAGRAM_URL = "https://www.instagram.com/larutapadel_club/";
 
 export default function Footer() {
   return (
-    <footer className="overflow-x-hidden border-t border-zinc-300 bg-zinc-200 dark:border-zinc-700 dark:bg-zinc-800 pb-[max(5rem,env(safe-area-inset-bottom))] sm:pb-4 sm:[padding-bottom:env(safe-area-inset-bottom)]">
-      <div className="mx-auto min-w-0 max-w-7xl px-4 py-10 sm:px-6 sm:py-16 lg:px-8">
-        <div className="grid min-w-0 grid-cols-1 gap-8 sm:gap-12 md:grid-cols-2 lg:grid-cols-4">
+    <footer className="overflow-x-hidden border-t border-zinc-300 bg-zinc-200 dark:border-zinc-700 dark:bg-zinc-800 pb-[max(5.5rem,calc(1rem+env(safe-area-inset-bottom)))] pt-8 sm:pb-6 sm:pt-10">
+      <div className="mx-auto min-w-0 max-w-7xl px-4 py-8 sm:px-6 sm:py-16 lg:px-8">
+          <div className="grid min-w-0 grid-cols-1 gap-8 sm:gap-12 md:grid-cols-2 lg:grid-cols-4">
           <div className="min-w-0 md:col-span-2 lg:col-span-2">
             <Link href="/" className="relative inline-flex items-center">
               <Image
