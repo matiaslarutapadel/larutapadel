@@ -2,7 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 import HeroCarousel from "./components/HeroCarousel";
 import { images } from "./lib/images";
+import { clasesImages } from "./lib/clasesImages";
 import { patrocinadores } from "./lib/patrocinadores";
+import { partnersImages } from "./lib/partnersImages";
 import { logo, logoAlt, logoDark } from "./lib/logo";
 
 export default function Home() {
@@ -68,7 +70,7 @@ export default function Home() {
             </div>
           </div>
           <div className="relative min-w-0 h-[45vh] min-h-[260px] sm:h-[50vh] sm:min-h-[280px] md:h-auto md:min-h-[85vh]">
-            <HeroCarousel images={images.slice(0, 6)} />
+            <HeroCarousel images={[images[0], clasesImages[0], images[2], images[3], clasesImages[3], images[4]]} />
           </div>
         </section>
 
@@ -90,14 +92,13 @@ export default function Home() {
             <div className="mb-6 flex min-w-0 flex-wrap justify-center gap-2 sm:mb-12 sm:gap-6 md:gap-10">
               <div className="flex items-center gap-2 rounded-xl border border-zinc-300 bg-white/60 px-4 py-2.5 dark:border-zinc-600 dark:bg-zinc-700/50 sm:px-5 sm:py-3">
                 <svg className="h-5 w-5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18 8h1a4 4 0 010 8h-1M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z" />
                 </svg>
                 <span className="font-medium text-zinc-800 dark:text-zinc-200">Cafetería</span>
               </div>
               <div className="flex items-center gap-2 rounded-xl border border-zinc-300 bg-white/60 px-4 py-2.5 dark:border-zinc-600 dark:bg-zinc-700/50 sm:px-5 sm:py-3">
                 <svg className="h-5 w-5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v8a2 2 0 002 2h10a2 2 0 002-2V8m-5 3h.01" />
                 </svg>
                 <span className="font-medium text-zinc-800 dark:text-zinc-200">Amplio estacionamiento</span>
               </div>
@@ -119,25 +120,27 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="border-t border-zinc-300 bg-zinc-200 py-10 dark:border-zinc-700 dark:bg-zinc-800 sm:py-16 md:py-20">
+        <section id="partners" className="border-t border-zinc-300 bg-zinc-100 py-10 dark:border-zinc-700 dark:bg-zinc-900 sm:py-16 md:py-20">
           <div className="mx-auto min-w-0 max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="mb-6 text-center sm:mb-14">
+            <div className="mb-8 text-center sm:mb-12">
               <h2 className="mb-2 text-2xl font-bold uppercase tracking-tight text-zinc-900 dark:text-zinc-100 sm:mb-3 sm:text-3xl md:text-4xl">
-                GALERÍA
+                Partners
               </h2>
               <div className="mx-auto h-1 w-20 rounded-full bg-red-600" />
+              <p className="mx-auto mt-3 max-w-xl text-sm text-zinc-600 dark:text-zinc-400 sm:text-base">
+                Aliados que nos acompañan
+              </p>
             </div>
-            <div className="grid min-w-0 grid-cols-2 gap-2 sm:grid-cols-3 sm:gap-3 md:gap-4 lg:grid-cols-5">
-              {images.map((img, i) => (
-                <div key={i} className="group relative aspect-square overflow-hidden rounded-lg">
+            <div className="grid min-w-0 grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-6 lg:gap-8">
+              {partnersImages.map((img, i) => (
+                <div key={i} className="group relative aspect-square overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-sm transition-all duration-300 hover:shadow-lg hover:shadow-red-500/10 dark:border-zinc-600 dark:bg-zinc-800 dark:hover:shadow-red-500/5">
                   <Image
                     src={img}
-                    alt={`Galería ${i + 1}`}
+                    alt={`Partner ${i + 1}`}
                     fill
-                    className="object-cover transition-transform duration-300 group-hover:scale-110"
-                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
+                    className="object-contain p-4 transition-transform duration-300 group-hover:scale-105"
+                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
                   />
-                  <div className="absolute inset-0 border-2 border-red-600/0 transition-colors group-hover:border-red-600/50" />
                 </div>
               ))}
             </div>
@@ -213,6 +216,31 @@ export default function Home() {
                   Instagram
                 </a>
               </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="galeria" className="border-t border-zinc-300 bg-zinc-200 py-10 dark:border-zinc-700 dark:bg-zinc-800 sm:py-16 md:py-20">
+          <div className="mx-auto min-w-0 max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="mb-6 text-center sm:mb-14">
+              <h2 className="mb-2 text-2xl font-bold uppercase tracking-tight text-zinc-900 dark:text-zinc-100 sm:mb-3 sm:text-3xl md:text-4xl">
+                GALERÍA
+              </h2>
+              <div className="mx-auto h-1 w-20 rounded-full bg-red-600" />
+            </div>
+            <div className="grid min-w-0 grid-cols-2 gap-2 sm:grid-cols-3 sm:gap-3 md:gap-4 lg:grid-cols-5">
+              {images.map((img, i) => (
+                <div key={i} className="group relative aspect-square overflow-hidden rounded-lg">
+                  <Image
+                    src={img}
+                    alt={`Galería ${i + 1}`}
+                    fill
+                    className="object-cover transition-transform duration-300 group-hover:scale-110"
+                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
+                  />
+                  <div className="absolute inset-0 border-2 border-red-600/0 transition-colors group-hover:border-red-600/50" />
+                </div>
+              ))}
             </div>
           </div>
         </section>

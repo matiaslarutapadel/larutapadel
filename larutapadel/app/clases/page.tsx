@@ -39,14 +39,29 @@ export default function ClasesPage() {
               Clases en La Ruta
             </h2>
             <div className="grid min-w-0 grid-cols-2 gap-2 sm:grid-cols-2 sm:gap-4 lg:grid-cols-4">
-              {clasesImages.map((img, i) => (
+              <div className="group relative col-span-2 aspect-[3/4] overflow-hidden rounded-xl border-2 border-red-500/50 bg-zinc-900 shadow-lg shadow-red-500/10 sm:col-span-1 sm:rounded-2xl">
+                <Image
+                  src={clasesImages[2]}
+                  alt="Matías Norre - Profesor de pádel La Ruta"
+                  fill
+                  className="object-contain p-3 transition-transform duration-300 group-hover:scale-105"
+                  sizes="(max-width: 1024px) 100vw, 25vw"
+                />
+                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-zinc-900 via-zinc-900/90 to-transparent pt-12 pb-3 text-center">
+                  <span className="inline-block rounded-full bg-red-600 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-white sm:text-sm">
+                    Profesor
+                  </span>
+                  <p className="mt-1.5 font-semibold text-white">Matías Norre</p>
+                </div>
+              </div>
+              {clasesImages.filter((_, idx) => idx !== 2).map((img, i) => (
                 <div key={i} className="group relative aspect-[4/3] overflow-hidden rounded-xl sm:rounded-2xl">
                   <Image
                     src={img}
                     alt={`Clase de pádel La Ruta ${i + 1}`}
                     fill
                     className="object-cover transition-transform duration-300 group-hover:scale-105"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 50vw, 25vw"
                   />
                 </div>
               ))}
