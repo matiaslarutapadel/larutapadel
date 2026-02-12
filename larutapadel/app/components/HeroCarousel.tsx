@@ -81,19 +81,21 @@ export default function HeroCarousel({ images }: Props) {
       {images.map((img, i) => (
         <div
           key={i}
-          className="absolute inset-0 transition-opacity duration-700 ease-in-out"
+          className="absolute inset-0 transition-opacity duration-700 ease-in-out overflow-hidden"
           style={{ opacity: i === index ? 1 : 0, zIndex: 0 }}
           aria-hidden={i !== index}
         >
-          <Image
-            src={img}
-            alt={`La Ruta Padel ${i + 1}`}
-            fill
-            className="object-cover select-none drag-none"
-            draggable={false}
-            priority={i === 0}
-            sizes="(max-width: 768px) 100vw, 50vw"
-          />
+          <div className="absolute inset-0">
+            <Image
+              src={img}
+              alt={`La Ruta Padel ${i + 1}`}
+              fill
+              className={`object-cover object-center min-w-full min-h-full select-none drag-none ${i === 0 ? "brightness-[1.2] contrast-[1.12] saturate-[1.15]" : ""}`}
+              draggable={false}
+              priority={i === 0}
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+          </div>
         </div>
       ))}
       {total > 1 && (

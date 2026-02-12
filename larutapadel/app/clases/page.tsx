@@ -54,7 +54,7 @@ export default function ClasesPage() {
                   <p className="mt-1.5 font-semibold text-white">Matías Norre</p>
                 </div>
               </div>
-              {clasesImages.filter((_, idx) => idx !== 2).map((img, i) => (
+              {clasesImages.filter((_, idx) => idx !== 2 && idx !== 1).map((img, i) => (
                 <div key={i} className="group relative aspect-[4/3] overflow-hidden rounded-xl sm:rounded-2xl">
                   <Image
                     src={img}

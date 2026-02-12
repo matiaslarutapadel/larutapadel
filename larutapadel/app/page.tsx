@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import HeroCarousel from "./components/HeroCarousel";
 import { images } from "./lib/images";
-import { clasesImages } from "./lib/clasesImages";
+import { carouselImages } from "./lib/carouselImages";
 import { patrocinadores } from "./lib/patrocinadores";
 import { partnersImages } from "./lib/partnersImages";
 import { logo, logoAlt, logoDark } from "./lib/logo";
@@ -70,7 +70,7 @@ export default function Home() {
             </div>
           </div>
           <div className="relative min-w-0 h-[40dvh] min-h-[240px] sm:h-[50vh] sm:min-h-[280px] md:h-auto md:min-h-[85vh]">
-            <HeroCarousel images={[images[0], clasesImages[0], images[2], images[3], clasesImages[3], images[4]]} />
+            <HeroCarousel images={carouselImages} />
           </div>
         </section>
 
@@ -104,7 +104,7 @@ export default function Home() {
               </div>
             </div>
             <div className="grid min-w-0 gap-2 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-              {[images[1], images[2], images[3], images[4], images[5], images[6]].map((img, i) => (
+              {[images[2], images[3], images[6]].map((img, i) => (
                 <div key={i} className="group relative aspect-[4/3] overflow-hidden rounded-xl">
                   <Image
                     src={img}
@@ -229,7 +229,7 @@ export default function Home() {
               <div className="mx-auto h-1 w-20 rounded-full bg-red-600" />
             </div>
             <div className="grid min-w-0 grid-cols-2 gap-2 sm:grid-cols-3 sm:gap-3 md:gap-4 lg:grid-cols-5">
-              {images.map((img, i) => (
+              {images.filter((_, i) => i !== 1 && i !== 3 && i !== images.length - 3).map((img, i) => (
                 <div key={i} className="group relative aspect-square overflow-hidden rounded-lg">
                   <Image
                     src={img}
