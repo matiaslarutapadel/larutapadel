@@ -67,6 +67,12 @@ export default function Home() {
               >
                 EL CLUB
               </a>
+              <Link
+                href="/clases"
+                className="inline-flex min-h-[48px] min-w-[120px] items-center justify-center rounded-lg border border-red-600/50 px-6 py-3 text-sm font-semibold text-red-500 transition-colors hover:bg-red-600/10 dark:border-red-400 dark:text-red-400 dark:hover:bg-red-500/20 dark:hover:border-red-400 sm:text-base"
+              >
+                CLASES
+              </Link>
             </div>
           </div>
           <div className="relative min-w-0 h-[40dvh] min-h-[240px] sm:h-[50vh] sm:min-h-[280px] md:h-auto md:min-h-[85vh]">
