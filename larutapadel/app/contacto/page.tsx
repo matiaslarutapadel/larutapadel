@@ -1,9 +1,20 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { images } from "../lib/images";
 
 const WHATSAPP_NUMBER = "56963223271";
 const INSTAGRAM_URL = "https://www.instagram.com/larutapadel_club/";
+
+export const metadata: Metadata = {
+  title: "Contacto",
+  description: "Contacto La Ruta Padel Club Nogales. WhatsApp, Instagram. Pucalan Parcela 27, Nogales. Reservas y consultas.",
+  alternates: { canonical: "/contacto" },
+  openGraph: {
+    title: "Contacto | La Ruta Padel Club Nogales",
+    description: "Escribinos por WhatsApp o seguinos en Instagram. La Ruta Padel Club, Nogales.",
+  },
+};
 
 export default function ContactoPage() {
   return (

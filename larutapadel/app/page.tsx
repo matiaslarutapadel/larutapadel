@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import HeroCarousel from "./components/HeroCarousel";
@@ -6,6 +7,15 @@ import { carouselImages } from "./lib/carouselImages";
 import { patrocinadores } from "./lib/patrocinadores";
 import { partnersImages } from "./lib/partnersImages";
 import { logo, logoAlt, logoDark } from "./lib/logo";
+
+export const metadata: Metadata = {
+  title: "Inicio",
+  description: "La Ruta Padel Club Nogales. Tres canchas full panorámicas, cafetería, amplio estacionamiento. Reservá y consultá clases en Pucalan Parcela 27.",
+  openGraph: {
+    title: "La Ruta Padel Club Nogales - Inicio",
+    description: "Club de pádel en Nogales. Canchas, cafetería, estacionamiento. Reservas y clases por WhatsApp.",
+  },
+};
 
 export default function Home() {
   return (

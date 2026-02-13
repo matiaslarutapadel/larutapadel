@@ -1,8 +1,19 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { clasesImages } from "../lib/clasesImages";
 
 const WHATSAPP_NUMBER = "56963223271";
+
+export const metadata: Metadata = {
+  title: "Clases de pádel",
+  description: "Clases de pádel en La Ruta Padel Club Nogales. Todos los niveles. Consultá horarios y tarifas por WhatsApp. Profesor Matías Norre.",
+  alternates: { canonical: "/clases" },
+  openGraph: {
+    title: "Clases de pádel | La Ruta Padel Club Nogales",
+    description: "Clases de pádel para todos los niveles en Nogales. Horarios y tarifas por WhatsApp.",
+  },
+};
 
 export default function ClasesPage() {
   return (

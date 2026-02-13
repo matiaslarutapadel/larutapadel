@@ -1,8 +1,19 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { images } from "../lib/images";
 
 const WHATSAPP_NUMBER = "56963223271";
+
+export const metadata: Metadata = {
+  title: "Reservas",
+  description: "Reservá tu cancha en La Ruta Padel Club Nogales. Tres canchas full panorámicas en Pucalan Parcela 27. Consultá por WhatsApp.",
+  alternates: { canonical: "/reservas" },
+  openGraph: {
+    title: "Reservar cancha | La Ruta Padel Club Nogales",
+    description: "Reservá tu cancha de pádel en Nogales. Consultá disponibilidad por WhatsApp.",
+  },
+};
 
 export default function ReservasPage() {
   return (
