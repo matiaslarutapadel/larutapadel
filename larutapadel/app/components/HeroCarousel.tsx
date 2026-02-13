@@ -90,7 +90,8 @@ export default function HeroCarousel({ images }: Props) {
               src={img}
               alt={`La Ruta Padel ${i + 1}`}
               fill
-              className={`object-cover object-center min-w-full min-h-full select-none drag-none ${i === 0 ? "brightness-[1.2] contrast-[1.12] saturate-[1.15]" : ""}`}
+              className={`object-cover min-w-full min-h-full select-none drag-none ${i === 0 ? "brightness-[1.2] contrast-[1.12] saturate-[1.15]" : "object-center"}`}
+              style={i === 0 ? { objectPosition: "42% center" } : undefined}
               draggable={false}
               priority={i === 0}
               sizes="(max-width: 768px) 100vw, 50vw"

@@ -245,7 +245,7 @@ export default function Home() {
               <div className="mx-auto h-1 w-20 rounded-full bg-red-600" />
             </div>
             <div className="grid min-w-0 grid-cols-2 gap-2 sm:grid-cols-3 sm:gap-3 md:gap-4 lg:grid-cols-5">
-              {images.filter((_, i) => i !== 1 && i !== 2 && i !== 3 && i !== 5 && i !== images.length - 3).map((img, i) => (
+              {images.filter((_, i) => i !== 1 && i !== 2 && i !== 3 && i !== 5 && i !== 9 && i !== 10 && i !== 11 && i !== 14 && i !== images.length - 3).map((img, i) => (
                 <div key={i} className="group relative aspect-square overflow-hidden rounded-lg">
                   <Image
                     src={img}
