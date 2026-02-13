@@ -64,25 +64,27 @@ export default function Home() {
                 </Link>
               </li>
             </ul>
-            <div className="flex flex-wrap gap-3 sm:gap-4">
-              <a
+            <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-stretch sm:gap-4">
+              <Link
                 href="/reservas"
-                className="inline-flex min-h-[48px] min-w-[120px] items-center justify-center rounded-lg bg-red-600 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-red-700 sm:text-base"
+                className="inline-flex min-h-[52px] flex-1 items-center justify-center gap-2 rounded-xl bg-red-600 px-6 py-3.5 text-base font-semibold text-white shadow-lg shadow-red-600/25 transition-all hover:bg-red-700 hover:shadow-xl hover:shadow-red-600/30 active:scale-[0.98] sm:min-w-[140px] sm:flex-none sm:px-8"
               >
                 RESERVAR
-              </a>
-              <a
-                href="#el-club"
-                className="inline-flex min-h-[48px] min-w-[120px] items-center justify-center rounded-lg border border-red-600/50 px-6 py-3 text-sm font-semibold text-red-500 transition-colors hover:bg-red-600/10 dark:border-red-400 dark:text-red-400 dark:hover:bg-red-500/20 dark:hover:border-red-400 sm:text-base"
-              >
-                EL CLUB
-              </a>
-              <Link
-                href="/clases"
-                className="inline-flex min-h-[48px] min-w-[120px] items-center justify-center rounded-lg border border-red-600/50 px-6 py-3 text-sm font-semibold text-red-500 transition-colors hover:bg-red-600/10 dark:border-red-400 dark:text-red-400 dark:hover:bg-red-500/20 dark:hover:border-red-400 sm:text-base"
-              >
-                CLASES
               </Link>
+              <div className="flex gap-3 sm:gap-4 sm:flex-1 sm:min-w-0">
+                <a
+                  href="#el-club"
+                  className="inline-flex min-h-[52px] flex-1 items-center justify-center rounded-xl border-2 border-red-500/60 bg-white px-5 py-3.5 text-sm font-semibold text-red-600 transition-all hover:border-red-500 hover:bg-red-50 hover:shadow-md active:scale-[0.98] dark:border-red-400/60 dark:bg-zinc-800 dark:text-red-400 dark:hover:border-red-400 dark:hover:bg-red-950/20 sm:text-base"
+                >
+                  EL CLUB
+                </a>
+                <Link
+                  href="/clases"
+                  className="inline-flex min-h-[52px] flex-1 items-center justify-center rounded-xl border-2 border-red-500/60 bg-white px-5 py-3.5 text-sm font-semibold text-red-600 transition-all hover:border-red-500 hover:bg-red-50 hover:shadow-md active:scale-[0.98] dark:border-red-400/60 dark:bg-zinc-800 dark:text-red-400 dark:hover:border-red-400 dark:hover:bg-red-950/20 sm:text-base"
+                >
+                  CLASES
+                </Link>
+              </div>
             </div>
           </div>
           <div className="relative min-w-0 h-[40dvh] min-h-[240px] sm:h-[50vh] sm:min-h-[280px] md:h-auto md:min-h-[85vh]">
@@ -90,7 +92,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="el-club" className="border-t border-zinc-300 bg-zinc-200 py-8 dark:border-zinc-700 dark:bg-zinc-800 sm:py-16 md:py-20">
+        <section id="el-club" className="scroll-mt-16 border-t border-zinc-300 bg-zinc-200 py-8 dark:border-zinc-700 dark:bg-zinc-800 sm:py-16 sm:scroll-mt-20 md:py-20">
           <div className="mx-auto min-w-0 max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mb-10 text-center sm:mb-14">
               <h2 className="mb-2 text-2xl font-bold uppercase tracking-tight text-zinc-900 dark:text-zinc-100 sm:mb-3 sm:text-3xl md:text-4xl">
@@ -136,7 +138,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="partners" className="border-t border-zinc-300 bg-zinc-100 py-8 dark:border-zinc-700 dark:bg-zinc-900 sm:py-16 md:py-20">
+        <section id="partners" className="border-t border-zinc-300 bg-zinc-100 py-10 dark:border-zinc-700 dark:bg-zinc-900 sm:py-16 md:py-20">
           <div className="mx-auto min-w-0 max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mb-8 text-center sm:mb-12">
               <h2 className="mb-2 text-2xl font-bold uppercase tracking-tight text-zinc-900 dark:text-zinc-100 sm:mb-3 sm:text-3xl md:text-4xl">
@@ -147,15 +149,15 @@ export default function Home() {
                 Aliados que nos acompañan
               </p>
             </div>
-            <div className="grid min-w-0 grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-6 lg:gap-8">
+            <div className="grid min-w-0 grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-6 md:gap-8 lg:grid-cols-3 lg:gap-10">
               {partnersImages.map((img, i) => (
-                <div key={i} className="group relative aspect-square overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-sm transition-all duration-300 hover:shadow-lg hover:shadow-red-500/10 dark:border-zinc-600 dark:bg-zinc-800 dark:hover:shadow-red-500/5">
+                <div key={i} className="group relative aspect-square min-h-0 overflow-hidden rounded-2xl border border-zinc-200 bg-white p-4 shadow-md transition-all duration-300 hover:border-red-200 hover:shadow-xl hover:shadow-red-500/10 dark:border-zinc-600 dark:bg-zinc-800 dark:hover:border-red-900/50 dark:hover:shadow-red-500/5 sm:p-6">
                   <Image
                     src={img}
                     alt={`Partner ${i + 1}`}
                     fill
-                    className="object-contain p-4 transition-transform duration-300 group-hover:scale-105"
-                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                    className="object-contain object-center p-2 transition-transform duration-300 group-hover:scale-[1.03]"
+                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 280px"
                   />
                 </div>
               ))}
