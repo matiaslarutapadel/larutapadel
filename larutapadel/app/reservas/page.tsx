@@ -116,7 +116,7 @@ export default function ReservasPage() {
               Nuestras canchas
             </h2>
             <div className="grid min-w-0 grid-cols-1 gap-3 sm:grid-cols-3 sm:gap-4">
-              {[images[3], images[4], images[5]].map((img, i) => (
+              {[images[3], images[4], images[6]].map((img, i) => (
                 <div key={i} className="group relative aspect-[4/3] overflow-hidden rounded-xl">
                   <Image
                     src={img}
